@@ -94,6 +94,7 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+
   outline: 4px dotted tomato;
 }
 
@@ -109,13 +110,13 @@ img {
   line-height: 1.17;
 
   display: inline-block;
-  margin: 0 0 20px;
+  margin-bottom: 20px;
 
   color: var(--accent-dark-color);
 }
 
 .section {
-  margin: 0 0 94px;
+  margin-bottom: 94px;
 }
 
 .title {
@@ -124,7 +125,7 @@ img {
   line-height: 1.17;
 
   text-align: center;
-  margin: 0 0 50px;
+  margin-bottom: 50px;
 
   color: var(--primary-dark-color);
 }
@@ -147,7 +148,11 @@ img {
   padding: 25px 0;
 }
 
-.header .pages-list {
+.header.container {
+  display: flex;
+}
+
+.pages-list {
   color: var(--primary-dark-color);
 }
 
@@ -170,10 +175,12 @@ img {
 
 .address-geo,
 .address-mail {
-  margin: 0 0 9px;
+  margin-bottom: 9px;
 }
 
 /* MAIN PAGE STYLES */
+
+/* hero section */
 
 .section-hero {
   text-align: center;
@@ -212,32 +219,36 @@ img {
   background: var(--hero-button-hover-color)
 }
 
+/* advantages section */
+
 .section-advantages .subtitle {
   font-weight: var(--font-bold);
   font-size: 14px;
   line-height: 1.17;
 
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 
   color: var(--primary-dark-color);
 }
 
+/* team section */
+
 .section-team {
   font-size: 16px;
   line-height: 1.17;
+  text-align: center;
 
   padding: 94px 0;
   margin: 0;
 
-  text-align: center;
 
   background-color: var(--background-light-color);
 }
 
-.section-team .card-person {
+.card-person {
   display: inline-block;
-  padding: 0 0 30px;
+  padding-bottom: 30px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -250,13 +261,13 @@ img {
   font-weight: var(--font-medium);
   font-size: inherit;
 
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 
   color: var(--primary-dark-color);
 }
 
-.section-team .person-photo {
-  margin: 0 0 30px;
+.person-photo {
+  margin-bottom: 30px;
 }
 
 /* PORTFOLIO PAGE STYLES */
@@ -271,20 +282,20 @@ img {
   padding: 94px 0;
 }
 
-.section-portfolio .filters-list {
-  margin: 0 0 50px;
+.filters-list {
+  margin-bottom: 50px;
 }
 
 .section-portfolio .card {
   display: inline-block;
-  margin: 0 0 30px;
-  padding: 0 0 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
 
   border: 1px solid #EEEEEE
 }
 
-.section-portfolio .card-img {
-  margin: 0 0 20px;
+.card-img {
+  margin-bottom: 20px;
 }
 
 .portfolio-cards .subtitle {
@@ -296,7 +307,7 @@ img {
   color: var(--primary-dark-color);
 }
 
-.portfolio-cards .description-filter {
+.description-filter {
   font-size: 16px;
   line-height: 1.875;
 }
