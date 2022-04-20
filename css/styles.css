@@ -9,6 +9,8 @@
   --font-bold: 700;
   --font-black: 900;
 
+  --items-default-r-margin: 30px;
+
   --primary-light-color: #fff;
   --primary-dark-color: #212121;
   --secondary-dark-color: #757575;
@@ -95,7 +97,7 @@ img {
   margin: 0 auto;
   padding: 0 15px;
 
-  outline: 4px dotted tomato;
+  /* outline: 4px dotted tomato; */
 }
 
 .interactive-link:hover,
@@ -248,6 +250,18 @@ img {
 
 /* advantages section */
 
+.advantages-list {
+  display: flex;
+}
+
+.advantages-list .item {
+  width: 270px;
+}
+
+.advantages-list .item:not(:last-child) {
+  margin-right: var(--items-default-r-margin);
+}
+
 .section-advantages .subtitle {
   font-weight: var(--font-bold);
   font-size: 14px;
@@ -257,6 +271,16 @@ img {
   margin-bottom: 10px;
 
   color: var(--primary-dark-color);
+}
+
+/* our work section */
+
+.our-work-list {
+  display: flex;
+}
+
+.our-work-list .item:not(:last-child) {
+  margin-right: var(--items-default-r-margin);
 }
 
 /* team section */
@@ -271,6 +295,14 @@ img {
 
 
   background-color: var(--background-light-color);
+}
+
+.team-list {
+  display: flex;
+}
+
+.team-list .card-person:not(:last-child) {
+  margin-right: var(--items-default-r-margin);
 }
 
 .card-person {
@@ -319,12 +351,24 @@ img {
   margin-right: 8px;
 }
 
-.section-portfolio .card {
-  display: inline-block;
+.portfolio-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-cards .card:not(:nth-child(3n)) {
+  margin-right: var(--items-default-r-margin);
+}
+
+.portfolio-cards .card {
   margin-bottom: 30px;
   padding-bottom: 20px;
 
-  border: 1px solid #EEEEEE
+  outline: 1px solid #EEEEEE;
+}
+
+.portfolio-cards .card:nth-last-child(-n+3) {
+  margin-bottom: 0px;
 }
 
 .card-img {
