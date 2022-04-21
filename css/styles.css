@@ -105,6 +105,10 @@ img {
   color: var(--accent-light-color);
 }
 
+.hidden {
+  display: none;
+}
+
 .logo {
   font-family: var(--font-family-secondary);
   font-weight: var(--font-bold);
@@ -349,22 +353,15 @@ img {
 .portfolio-cards {
   display: flex;
   flex-wrap: wrap;
-}
-
-.portfolio-cards .card:not(:nth-child(3n)) {
-  margin-right: var(--items-default-margin);
+  margin: calc(var(--items-default-margin) / -2);
 }
 
 .portfolio-cards .card {
-  margin-bottom: var(--items-default-margin);
+  margin: calc(var(--items-default-margin) / 2);
   padding-bottom: 20px;
-  width: calc((100% - 2 * var(--items-default-margin)) / 3);
+  /* width: calc((100% - 2 * var(--items-default-margin)) / 3); */
 
   outline: 1px solid #EEEEEE;
-}
-
-.portfolio-cards .card:nth-last-child(-n+3) {
-  margin-bottom: 0px;
 }
 
 .card-img {
