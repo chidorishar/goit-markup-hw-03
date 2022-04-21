@@ -343,6 +343,7 @@ img {
 .filters-list {
   display: flex;
   justify-content: center;
+  /* flex-wrap: wrap; */
   margin-bottom: 50px;
 }
 
@@ -359,7 +360,7 @@ img {
 .portfolio-cards .card {
   margin: calc(var(--items-default-margin) / 2);
   padding-bottom: 20px;
-  /* width: calc((100% - 2 * var(--items-default-margin)) / 3); */
+  /* width: calc((100% - 3 * var(--items-default-margin)) / 3); */
 
   outline: 1px solid #EEEEEE;
 }
