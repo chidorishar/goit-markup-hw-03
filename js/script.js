@@ -12,4 +12,6 @@ function OnFilterClick(caller) {
       card.classList.add('hidden');
     });
   }
+  document.querySelector('.active-filter').classList.remove('active-filter');
+  caller.classList.add('active-filter');
 }

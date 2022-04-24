@@ -83,6 +83,7 @@ img {
   color: var(--primary-dark-color);
 }
 
+.active-filter,
 .button:hover,
 .button:focus {
   background-color: var(--accent-light-color);
@@ -113,9 +114,6 @@ img {
   font-weight: var(--font-bold);
   font-size: 26px;
   line-height: 1.17;
-
-  display: inline-block;
-  margin-bottom: 20px;
 
   color: var(--accent-dark-color);
 }
@@ -149,8 +147,6 @@ img {
   font-weight: var(--font-medium);
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  padding: 24px 0;
 
   border-bottom: 1px solid #ececec;
 }
@@ -187,7 +183,8 @@ img {
 
 .pages-list .clean-link,
 .header-contacts .clean-link {
-  padding: 20px 0;
+  display: block;
+  padding: 32px 0;
 }
 
 /* FOOTER */
@@ -232,7 +229,7 @@ img {
   text-transform: uppercase;
 
   margin: 0 auto 30px;
-  width: 696px;
+  max-width: 696px;
 }
 
 .section-hero .button {
@@ -259,7 +256,8 @@ img {
 }
 
 .advantages-list .item {
-  width: 270px;
+  /* max-width: 270px; */
+  flex-basis: calc((100% - var(--items-default-margin)) / 4);
 }
 
 .advantages-list .item:not(:last-child) {
@@ -310,16 +308,13 @@ img {
 }
 
 .card-person {
-  display: inline-block;
-  padding-bottom: 30px;
-
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-light-color);
 }
 
-.section-team .subtitle {
+.card-person .subtitle {
   font-weight: var(--font-medium);
   font-size: inherit;
 
@@ -328,8 +323,8 @@ img {
   color: var(--primary-dark-color);
 }
 
-.person-photo {
-  margin-bottom: 30px;
+.card-person .card-text-wrapper {
+  padding: 30px 15px;
 }
 
 /* PORTFOLIO PAGE STYLES */
@@ -362,8 +357,8 @@ img {
   flex-basis: calc(100% / 3 - var(--items-default-margin));
 }
 
-.cards-text-container {
-  padding: 20px 23px 19px;
+.portfolio-cards .card-text-wrapper {
+  padding: 20px 24px;
 
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
