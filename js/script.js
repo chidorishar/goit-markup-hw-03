@@ -1,17 +1,20 @@
-function OnFilterClick(caller) {
-  var selectedCards = document.querySelectorAll('.card');
+const filters = document.querySelectorAll('.filters-list .button');
+var selectedCards = document.querySelectorAll('.card');
 
-  selectedCards.forEach(function (card) {
-    card.classList.remove('hidden');
-  });
-  if (caller.id != 'all-filter-button') {
+filters.forEach(f => f.addEventListener('click', onFilterClick));
+
+function onFilterClick() {
+  // unhide previously hidden cards
+  selectedCards.forEach(card => card.classList.remove('hidden'));
+  if (this.id != 'all-filter-button') {
+    //select cards by type given by clicked filter
     selectedCards = document.querySelectorAll(
-      '.card:not(.' + caller.id.replace('-filter-button', '-card') + ')'
+      '.card:not(.' + this.id.replace('-filter-button', '-card') + ')'
     );
-    selectedCards.forEach(function (card) {
-      card.classList.add('hidden');
-    });
+    //hide selected cards
+    selectedCards.forEach(card => card.classList.add('hidden'));
   }
+  //set proper style to active filter button
   document.querySelector('.active-filter').classList.remove('active-filter');
-  caller.classList.add('active-filter');
+  this.classList.add('active-filter');
 }
