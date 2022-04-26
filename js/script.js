@@ -1,9 +1,9 @@
 const filters = document.querySelectorAll('.filters-list .button');
 var selectedCards = document.querySelectorAll('.card');
 
-filters.forEach(f => f.addEventListener('click', onFilterClick));
+filters.forEach(f => f.addEventListener('click', onFiltersClick));
 
-function onFilterClick() {
+function onFiltersClick() {
   // unhide previously hidden cards
   selectedCards.forEach(card => card.classList.remove('hidden'));
   if (this.id != 'all-filter-button') {
